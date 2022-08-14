@@ -27,7 +27,7 @@ AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('FORCES_SUB')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else auth_channel
 AUTH_GROUPS = [int(admin) for admin in environ.get("AUTH_GROUPS", "").split()]
-TUTORIAL = "https://t.me/movieshubchannel2"
+TUTORIAL = "https://youtu.be/5hnYOKBzyi8"
 # MongoDB information
 DATABASE_URI = environ['DATABASE_2']
 DATABASE_NAME = environ['BOT_NAME']
@@ -45,9 +45,9 @@ FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "")
 OMDB_API_KEY = environ.get("OMDB_API_KEY", "http://www.omdbapi.com/?i=tt3896198&apikey=4f08a979")
 if FILE_CAPTION.strip() == "":
     CUSTOM_FILE_CAPTION=None
-else:
-    CUSTOM_FILE_CAPTION=FILE_CAPTION
-if OMDB_API_KEY.strip() == "":
-    API_KEY=None
-else:
-    API_KEY=OMDB_API_KEY
+    else:
+        CUSTOM_FILE_CAPTION=FILE_CAPTION
+        if OMDB_API_KEY.strip() == "":
+            API_KEY=None
+            else:
+                API_KEY=OMDB_API_KEY
